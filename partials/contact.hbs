@@ -1,0 +1,23 @@
+{{#if resume.basics}}
+    <section class="section-contact">
+		<div class="col-xs-5 nopadding left">
+			{{#if resume.basics.email}}
+				{{resume.basics.email}}
+            {{/if}}
+		</div>
+		<div class="col-xs-2 nopadding center">
+            {{#if resume.basics.phone}}
+				{{resume.basics.phone}}
+            {{/if}}
+		</div>
+		<div class="col-xs-5 nopadding right link-contact">	
+			{{#if resume.basics.profiles.length}}
+				{{#each resume.basics.profiles}}
+					{{#ifEquals network "LinkedIn"}}
+						<a href="{{url}}" class="position">{{url}}</a>
+					{{/ifEquals}}
+				{{/each}}
+			{{/if}}
+		</div>
+    </section>
+{{/if}}

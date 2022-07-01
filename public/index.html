@@ -1,0 +1,938 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+		<title>Paulo Figueiredo</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+		:root {
+	--between-skills-education-space: 15rem;
+	--between-education-awards-space: 0;
+	
+	--dominant-color: #1E1E1E;
+	--sub-dominant-color: #6D6D6D;
+	--text-color: #737373;
+	--white-color: #FFFFFF;
+	--background-color: #E5DED4;
+	--border-color: #C7C7C7;
+	--mouse-hover-color: red;
+
+	--large-text-font: 1.4rem;
+	--small-title-text-font: 1.3rem;
+	--small-text-font: 1.2rem;
+}
+
+body {
+	background: var(--background-color);
+	line-height: 1.4;
+}
+
+.container {
+	/*padding: 10%;*/
+	padding: 0;
+	/*font-size: var(--small-font)*/
+}
+
+#resume {
+	border-radius: 5px;
+	/*border: 1px solid var(--border-color);*/
+	overflow: hidden;
+}
+
+.col-xs-12 {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.col-xs-9 {
+	padding-top: 0;
+	padding-right: 0.6rem;
+	padding-left: 3rem;
+}
+
+.col-xs-3 {
+	padding-top: 0;
+	padding-right: 3rem;
+	padding-bottom: 0.95rem;
+	padding-left: 0.6rem;
+}
+
+.nopadding {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+li.circle {
+  list-style-type: circle;
+}
+
+
+.title {
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	color: var(--sub-dominant-color);
+}
+
+.label {
+	padding: .3em .6em .3em;
+	line-height: 2.2em;
+}
+
+[class^="section-"] > .title {
+  	font-weight: bold;
+	font-size: 1.5rem;
+	letter-spacing: 0.3rem;
+	color: var(--sub-dominant-color);
+}
+
+[class^="section-"] > .title .title-icon,
+[class^="section-"] > .title span {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--sub-dominant-color);
+}
+
+.between-skills-education-space{
+	height: 0;
+	display:inline-block;
+}
+
+.between-education-awards-space {
+	height: 0;
+	display:inline-block;
+}
+
+/* REGION: Header */
+
+.header {
+	padding-top: 1.0rem;
+	background: var(--white-color);
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
+}
+
+/* REGION: Header - Sections */
+
+.section-name h1 {
+	color: var(--dominant-color);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2.6rem;
+	letter-spacing: 0.5rem;
+	font-weight: bold;
+	margin-top: 3.0rem;
+	margin-bottom: 0;
+}
+
+.section-name h2 {
+	color: var(--sub-dominant-color);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	letter-spacing: 0.5rem;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.section-summary {
+	text-align: justify;
+	color: var(--text-color);
+	font-size: var(--large-text-font);
+	margin-bottom: 1rem;
+}
+
+.section-summary .title {
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.section-contact {
+	font-size: 1.2rem;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	color: var(--text-color);
+}
+
+div.link-contact .position {
+	color: var(--text-color);
+	font-size: var(--small-text-font);
+}
+
+div.link-contact a.position:hover{
+	color: var(--mouse-hover-color);
+}
+
+.section-contact .left{
+  	text-align: left;
+}
+
+.section-contact .center{
+  	text-align: center;
+}
+
+.section-contact .right{
+  	text-align: right;
+}
+
+/* REGION: Content */
+
+.content {
+	background: var(--white-color);
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
+}
+
+.content a:link, .content a:hover, .content a:visited {
+	text-decoration: none;
+}
+
+/* REGION: Content - Sections */
+
+.section-work .item {
+	margin-bottom: 1.0rem;
+}
+
+.section-work .title {
+	margin-top: 0;
+}
+
+.section-work .item .position {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--dominant-color);
+	font-sixe: var(--large-text-font);
+}
+
+.section-work .item .position a.position:hover{
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--mouse-hover-color);
+}
+
+.section-work .item .company {
+    padding: 0.5rem 0 0.5rem 0;
+    font-weight: bold;
+}
+
+.section-work .item .summary, .section-work .item .highlights {
+    text-align: justify;
+	color: var(--text-color);
+	font-sixe: var(--large-text-font);
+}
+
+.section-work ul.highlights {
+	margin: 0.5rem 0 0.5rem 2.0rem;
+	padding: 0;
+	color: var(--text-color);
+	font-sixe: var(--large-text-font);
+}
+
+.section-work ul.highlights li.subhighlights{
+	margin: 0 0 0 2.0rem;
+	padding: 0;
+	color: var(--text-color);
+	font-sixe: var(--large-font);
+}
+
+/* REGION: Sidebar */
+
+.sidebar { 
+	background: var(--white-color);
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
+}
+
+/* REGION: Sidebar - Sections */
+
+.section-skills .title {
+	margin-top: 0;
+}
+
+.section-skills .item {
+	margin-bottom: 0.5rem;
+	color: var(--text-color);
+	font-size: var(--small-text-font);
+}
+
+.section-education .studyTitle {
+	font-weight: bold;
+	color: var(--text-color);
+	font-size: var(--small-title-text-font);
+}
+
+.section-education .institution {
+	color: var(--text-color);
+	font-size: var(--small-text-font);
+}
+
+.section-education .date {
+	font-weight: normal;
+	color: var(--text-color);
+	font-size: var(--small-text-font);
+}
+
+.section-education .gpa {
+	color: var(--text-color);
+	font-size: var(--small-text-font);
+}
+
+.section-education .courses {
+	color: var(--text-color);
+	font-size: var(--small-text-font);
+}
+
+.section-education ul.courses {
+	margin: 0.5rem 0 0rem 0.8rem;
+	padding: 0;
+}
+
+.section-education .ul.courses li {
+	margin:0;
+}
+
+.section-languages ul.languages {
+	margin: 0.5rem 0 0.5rem 0.8rem;
+	padding: 0;
+}
+
+.section-languages .item .language {
+	font-weight: bold;
+	color: var(--text-color);
+	font-size: var(--small-title-text-font);
+}
+
+.section-languages .item .fluency {
+	font-weight: normal;
+	color: var(--text-color);
+	font-size: var(--small-text-font);
+}
+
+.section-interests ul.interests {
+	margin: 0.5rem 0 0.5rem 0.8rem;
+	padding: 0;
+	color: var(--text-color);
+	font-size: var(--small-title-text-font);
+}
+
+.section-interests .item .interests {
+	color: var(--text-color);
+	font-size: var(--small-text-font);
+}
+
+.section-awards ul.awards {
+	margin: 0.5rem 0 0.5rem 0.8rem;
+	padding: 0;
+}
+
+.section-awards .item .award {
+	font-weight: bold;
+	color: var(--text-color);
+	font-size: var(--small-title-text-font);
+}
+
+.section-awards .item .date, .section-awards .item .awarder {
+	font-weight: normal;
+	color: var(--text-color);
+	font-size: var(--small-text-font);
+}
+
+.section-awards .item .summary {
+	font-weight: normal;
+	font-style: italic;
+	text-align: justify;
+	font-size: 1.2rem;
+}
+
+/* Sections */
+
+.section-volunteer .item {
+  margin-bottom: 2.5rem;
+}
+
+.section-volunteer .item .position {
+  font-weight: bold;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.section-volunteer .item .company {
+    padding: 0.5rem 0 0.5rem 0;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.section-volunteer .item .summary, .section-volunteer .item .highlights {
+    text-align: justify;
+}
+
+
+.section-publications .item {
+  margin-bottom: 2.5rem;
+}
+
+.section-publications .item .name {
+	font-weight: bold;
+	color: var(--text-color);
+	text-transform: uppercase;
+}
+
+.section-publications .item .publication {
+    padding: 0.5rem 0 0.5rem 0;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.section-publications .item .summary, .section-publications .item .highlights {
+    font-style: italic;
+    text-align: justify;
+}
+
+/* Print */
+
+@media print {
+	a[href]:after {
+		content: none !important;
+	}
+	
+	div.between-skills-education-space {
+		display:inline-block;
+		height: var(--between-skills-education-space);
+	}
+	
+	div.between-education-awards-space {
+		display:inline-block;
+		height: var(--between-education-awards-space);
+	}
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row" id="resume">
+				<div>
+					<div class="col-xs-12 header">
+						    <section class="section-contact">
+								<div class="col-xs-5 nopadding left">
+										paulo.braz.figueiredo@gmail.com
+								</div>
+								<div class="col-xs-2 nopadding center">
+										07955506573
+								</div>
+								<div class="col-xs-5 nopadding right link-contact">	
+												<a href="https://www.linkedin.com/in/paulobrazfigueiredo" class="position">https://www.linkedin.com/in/paulobrazfigueiredo</a>
+								</div>
+						    </section>
+					</div>
+					<div class="col-xs-12 header">
+							<section class="section-name">
+								<h1>Paulo Figueiredo</h1>
+								<h2>Software Engineer</h2>
+							</section>
+					</div>
+					<div class="col-xs-12 header">
+							<section class="section-summary">
+								<h2 class="title">
+								    <span class="">Profile</span>
+								</h2>
+								Fifteen years of experience in design and development of different scale applications particularly in the Trading and Banking industries. Mainly using .Net Framework and C# language. Experience adapting to different technologies and business areas, fulfilling the toughest deadlines. Always strive to provide the best quality solution even in a fast-paced environment. Love to learn new technologies and the best way to take advantage of them. Team efficiency and happiness growth became a real fulfill factor.
+							</section>
+					</div>
+				</div>
+				<div class="col-xs-9 content">					
+					<section class="section-work">
+						<h2 class="title">
+						    <span class="">Experience</span>
+						</h2>
+								<div class="item">
+									<span class="date">
+											<span class="startDate position">
+												Nov 2019
+											</span>
+											<span class="endDate position">
+												- Feb 2021
+											</span>
+									</span>
+									 | 
+										<span class="position">
+												<a href="http://www.reed.co.uk" class="position">reed.co.uk</a>
+										</span>
+									 | 
+										<span class="position">
+											Senior Software Development Engineer
+										</span>			
+										<br/>
+										<span class="summary">
+											Was part of Jobseeker and Recruiter Experience teams.	
+										</span>	
+										<br/>
+										<span class="summary">
+											Highlights:
+										</span>				
+										<ul class="highlights">
+													<li>Helped to assemble the Jobseeker Scrum team working process.</li>
+													<li>Designed and implemented the Adobe Target back-end integration with Jobseeker platform (C#, .Net Framework 4.6.1 and NUnit).</li>
+													<li>Was responsible for the Jobseeker release process stabilization (TeamCity, Confluence and Git).</li>
+													<li>Designed and implemented the Customer Engagement Platform integration with Recruiter system (C#, Braze, .Net Framework 4.6.2, NUnit and Hangfire).</li>
+													<li>Developed the Web API Jobs handling service (C#,.Net Core 3.1, xUnit, AWS Secrets, Azure DevOps and Cypress).</li>
+										</ul>
+								</div>
+								<div class="item">
+									<span class="date">
+											<span class="startDate position">
+												Oct 2018
+											</span>
+											<span class="endDate position">
+												- Sep 2019
+											</span>
+									</span>
+									 | 
+										<span class="position">
+												<a href="http://www.gazprom-mt.com" class="position">Gazprom Marketing &amp; Trading</a>
+										</span>
+									 | 
+										<span class="position">
+											Developer
+										</span>			
+										<br/>
+										<span class="summary">
+											Worked in Kanban ways, always developing and/or correcting the trading supporting systems that are vital to the daily trading activities in the company.	
+										</span>	
+										<br/>
+										<span class="summary">
+											Highlights:
+										</span>				
+										<ul class="highlights">
+													<li>Designed and developed the new centralized data gateway to have access to curves data, through all trading desks (Python 2.6 and 3.6, TFS Git, GitHub, Azure DevOps).</li>
+													<li>Designed and developed the coordinator component of the new curve model calculation engine (C#, .Net Framework 4.5.2, TFS Git and Azure DevOps).</li>
+													<li>Changed and created bespoke C# VSTO worksheets used by traders (C# and VSTO 2017).</li>
+										</ul>
+								</div>
+								<div class="item">
+									<span class="date">
+											<span class="startDate position">
+												Apr 2018
+											</span>
+											<span class="endDate position">
+												- Sep 2018
+											</span>
+									</span>
+									 | 
+										<span class="position">
+												<a href="http://www.total.com" class="position">Total (Talan consultant)</a>
+										</span>
+									 | 
+										<span class="position">
+											Technology Team Leader
+										</span>			
+										<br/>
+										<span class="summary">
+											Was responsible for the compliance systems. The compliance systems provided tools to monitor and report to external parties the required regulatory information for EMIR and REMIT.	
+										</span>	
+										<br/>
+										<span class="summary">
+											Highlights:
+										</span>				
+										<ul class="highlights">
+													<li>Corrected and developed features of REMIT reporting (Records of wholesale Energy Market Integrity and Transparency). (WPF, .Net Framework 4.5, TFS Git, PL/SQL and Oracle).</li>
+													<li>Adapted the generation of EMIR reporting (European Market Infrastructure Regulation on derivatives) to be compliant with the new EMIR L3 norms (WPF, .Net Framework 4.5, TFS Git, PL/SQL and Oracle).</li>
+													<li>Changed the reports delivery component to perform additional business validations.</li>
+													<li>Was an active part implementing the Scrum development methodology and continuous improvement of the team development processes (TFS 2015).</li>
+										</ul>
+								</div>
+								<div class="item">
+									<span class="date">
+											<span class="startDate position">
+												Jul 2017
+											</span>
+											<span class="endDate position">
+												- Mar 2018
+											</span>
+									</span>
+									 | 
+										<span class="position">
+												<a href="http://www.total.com" class="position">Total (Talan consultant)</a>
+										</span>
+									 | 
+										<span class="position">
+											Senior Software Developer
+										</span>			
+								</div>
+								<div class="item">
+									<span class="date">
+											<span class="startDate position">
+												Mar 2015
+											</span>
+											<span class="endDate position">
+												- Jul 2017
+											</span>
+									</span>
+									 | 
+										<span class="position">
+												<a href="http://www.traceone.com/" class="position">Trace One</a>
+										</span>
+									 | 
+										<span class="position">
+											Senior Developer
+										</span>			
+										<br/>
+										<span class="summary">
+											Worked with retailers, manufacturers and suppliers product life-cycles management systems.	
+										</span>	
+										<br/>
+										<span class="summary">
+											Highlights:
+										</span>				
+										<ul class="highlights">
+													<li>Designed and implemented the TraceOne OpenId cross-systems authorization and authentication platform:</li>
+													<li class="circle subhighlights">Designed and documented the solution architecture.</li>
+													<li class="circle subhighlights">Implemented the system first version (Identity Server 3, SQL Server 2008, NancyFX, Dapper .NET, NUnit, Moq and Fluent Assertions).</li>
+													<li>Integrated the Cross Browser, multi-browser (Internet Explorer 11, Chrome and Firefox), project team:</li>
+													<li class="circle subhighlights">Changed gulp build pipeline.</li>
+													<li class="circle subhighlights">Changed the custom classic ASP conversion parser to incorporate more conversion cases.</li>
+													<li class="circle subhighlights">Converted several components, pages and dialogs (jQuery, sass 3 and jasmine).</li>
+													<li class="circle subhighlights">Helped implementing the Scrum methodology developing process.</li>
+													<li>Improved the performance of the custom PDM deployment tool:</li>
+													<li class="circle subhighlights">Designed and implemented the parallelization of the deployment operations over the databases instances, gaining 1 hour in a previous total of 3 hours process (C# with PLINQ).</li>
+													<li>Developed the proof of concept of the Trace One new scheduled tasks system:</li>
+													<li class="circle subhighlights">Designed and implemented the fully parameterized windows service scheduled tasks launcher (C#, Hangfire framework and windows services).</li>
+													<li class="circle subhighlights">Implemented the scheduled tasks libraries dynamic loader system.</li>
+										</ul>
+								</div>
+								<div class="item">
+									<span class="date">
+											<span class="startDate position">
+												Jun 2014
+											</span>
+											<span class="endDate position">
+												- Feb 2015
+											</span>
+									</span>
+									 | 
+										<span class="position">
+												Target IT LTD
+										</span>
+									 | 
+										<span class="position">
+											Senior Developer
+										</span>			
+										<br/>
+										<span class="summary">
+											Was developing QE2, the new Gresham Underwriting Limited insurance systems.	
+										</span>	
+										<br/>
+										<span class="summary">
+											Highlights:
+										</span>				
+										<ul class="highlights">
+													<li>Designed and implemented the layered architecture of the system web services.</li>
+													<li>Implemented the system transversal log service (.Net Framework 4.5).</li>
+													<li>Tweaked the Entity Framework 6 to automatically perform audit and versioning.</li>
+													<li>Designed and Implemented the generic data manipulation web service.</li>
+													<li>Implemented the generic data access and manipulation web application (MVC 4).</li>
+										</ul>
+								</div>
+								<div class="item">
+									<span class="date">
+											<span class="startDate position">
+												Sep 2006
+											</span>
+											<span class="endDate position">
+												- Apr 2014
+											</span>
+									</span>
+									 | 
+										<span class="position">
+												<a href="http://www.novabase.pt/" class="position">Novabase Business Solutions</a>
+										</span>
+									 | 
+										<span class="position">
+											Consultant
+										</span>			
+										<br/>
+										<span class="summary">
+											As a consultant I have done projects in many different clients, targeting various business areas using a large spectrum of technologies	
+										</span>	
+										<br/>
+										<span class="summary">
+											Highlights:
+										</span>				
+										<ul class="highlights">
+													<li>Designed and coordinated the optimizations of Portuguese Postal Offices geographic referencing and characterization ArcMap component system:</li>
+													<li class="circle subhighlights">Analyzed viability of optimization of parallels design to the street axis on Portuguese map (ArcMap).</li>
+													<li class="circle subhighlights">Acted as team leader and main developer using C# ArcMap API (.Net Framework 2.0).</li>
+													<li class="circle subhighlights">Mentored and coached to build a high performing technical team.</li>
+													<li>Portuguese Postal Offices geographic referencing and characterization system:</li>
+													<li class="circle subhighlights">Based on previously requirement acquisition, coauthored a designed the new requirements documents.</li>
+													<li class="circle subhighlights">Developed several new main systems using ASP.NET web forms and improved existing ones (.Net Framework 2.0).</li>
+													<li class="circle subhighlights">Acted as the main developer on geographical data importation and exportation processes using windows forms (.Net Framework 2.0).</li>
+													<li>Millennium BCP Bank Call Centres Pilot development of technological upgrade:</li>
+													<li class="circle subhighlights">Analyzed and solo developed the operational library of manipulation and communication with CTI OS telephone functionalities (.Net Framework 2.0).</li>
+													<li class="circle subhighlights">Evaluated the viability of implementation of the webchat functionalities.</li>
+													<li class="circle subhighlights">Supervised the webchat interface development (.Net Framework 3.5).</li>
+													<li>Implemented Ads My Way advertisement web site:</li>
+													<li class="circle subhighlights">Acted as technical architect and team leader.</li>
+													<li class="circle subhighlights">Mentored and coached the team.</li>
+													<li class="circle subhighlights">Defined and supervised project tasks definition and attributions.</li>
+													<li class="circle subhighlights">Ensured design, organization and quality of all code produced by the team.</li>
+													<li>Developed a system for correcting postal addresses:</li>
+													<li class="circle subhighlights">Acted as developer of several application windows forms (.Net Framework 2.0).</li>
+													<li class="circle subhighlights">Designed and developed the synchronization of reference and operational data between client application component and server component.</li>
+													<li>Worked in evolutionary and corrective maintenance of Portuguese expedition of parcels between postal offices centers.</li>
+													<li class="circle subhighlights">Acted as solo designer and developer of new functionalities for reception and reroute of new types of mail objects:</li>
+													<li class="circle subhighlights">Designed new and changed system reports.</li>
+													<li class="circle subhighlights">Ensured package quality delivery in all system releases.</li>
+													<li class="circle subhighlights">Provided troubleshooting support and maintenance of the system in production (application installed over 1300 machines distributed along the Portuguese territory).</li>
+										</ul>
+								</div>
+					</section>
+				</div>
+				<div class="col-xs-3 sidebar">
+						<section class="section-skills">
+							<h2 class="title">
+							    <span class="">Main Skills</span>
+							</h2>
+								<div class="item">
+										<div class="name">
+											Object-Oriented
+										</div>
+											<div class="keywords">
+													<span class="label label-default">C#</span>
+													<span class="label label-default">Python</span>
+											</div>
+								</div>
+								<div class="item">
+										<div class="name">
+											Web Development
+										</div>
+											<div class="keywords">
+													<span class="label label-default">ASP.NET</span>
+													<span class="label label-default">Microsoft MVC</span>
+													<span class="label label-default">HTML</span>
+													<span class="label label-default">CSS</span>
+													<span class="label label-default">JavaScript</span>
+													<span class="label label-default">jQuery</span>
+													<span class="label label-default">Blazor</span>
+													<span class="label label-default">Silverlight</span>
+											</div>
+								</div>
+								<div class="item">
+										<div class="name">
+											Data Storage
+										</div>
+											<div class="keywords">
+													<span class="label label-default">T-SQL</span>
+													<span class="label label-default">PL/SQL</span>
+													<span class="label label-default">MySQL</span>
+													<span class="label label-default">LiteDB</span>
+													<span class="label label-default">LINQ</span>
+											</div>
+								</div>
+								<div class="item">
+										<div class="name">
+											Back-End Development
+										</div>
+											<div class="keywords">
+													<span class="label label-default">REST Services</span>
+													<span class="label label-default">Web Services</span>
+													<span class="label label-default">Windows Services</span>
+													<span class="label label-default">Messaging Queueing</span>
+											</div>
+								</div>
+								<div class="item">
+										<div class="name">
+											Desktop Development
+										</div>
+											<div class="keywords">
+													<span class="label label-default">WPF</span>
+													<span class="label label-default">Windows Forms</span>
+													<span class="label label-default">VSTO Excel</span>
+											</div>
+								</div>
+								<div class="item">
+										<div class="name">
+											Testing
+										</div>
+											<div class="keywords">
+													<span class="label label-default">TDD</span>
+													<span class="label label-default">BDD</span>
+													<span class="label label-default">xUnit</span>
+													<span class="label label-default">NUnit</span>
+													<span class="label label-default">Moq</span>
+													<span class="label label-default">Rhino Mocks</span>
+													<span class="label label-default">Microsoft Fakes</span>
+													<span class="label label-default">Fluent Assertions</span>
+													<span class="label label-default">SpecFlow</span>
+											</div>
+								</div>
+								<div class="item">
+										<div class="name">
+											Object–Relational Mapping
+										</div>
+											<div class="keywords">
+													<span class="label label-default">Entity Framework</span>
+													<span class="label label-default">Dapper</span>
+											</div>
+								</div>
+								<div class="item">
+										<div class="name">
+											CI/CD
+										</div>
+											<div class="keywords">
+													<span class="label label-default">Azure DevOps</span>
+													<span class="label label-default">TeamCity</span>
+											</div>
+								</div>
+								<div class="item">
+										<div class="name">
+											Monitoring
+										</div>
+											<div class="keywords">
+													<span class="label label-default">Elastic</span>
+													<span class="label label-default">Datadog</span>
+													<span class="label label-default">AppDynamics</span>
+											</div>
+								</div>
+								<div class="item">
+										<div class="name">
+											Development Process
+										</div>
+											<div class="keywords">
+													<span class="label label-default">Scrum</span>
+													<span class="label label-default">Kanban</span>
+													<span class="label label-default">Requirement Analysis</span>
+											</div>
+								</div>
+						</section>
+					<div class="between-skills-education-space"></div>
+						<section class="section-education">
+							<h2 class="title">
+							    <span class="">Education</span>
+							</h2>
+								<div class="item">
+									<div class="studyTitle">
+											<span class="studyType">
+												Informatics Engineering
+											</span>
+											<span class="gpa">
+												(five years degree)
+											</span>
+										<span class="date">
+												<span class="startDate">
+													2001
+												</span>
+												<span class="endDate">
+													- 2006
+												</span>
+										</span>
+									</div>
+										<div class="institution">
+											NOVA School of Science and Technology
+										</div>
+										<ul class="courses">
+												<li>Software Development</li>
+												<li>Network Technologies (Distributed Systems and Web Services)</li>
+												<li>Software Engineering (Design and Analysis)</li>
+												<li>Development (Data Structures and Languages)</li>
+												<li>Databases (Design and Implementation)</li>
+										</ul>
+								</div>
+						</section>
+					<div class="between-education-awards-space"></div>
+					<section class="section-awards">
+						<h2 class="title">
+						    <span class="">Awards</span>
+						</h2>
+						<ul class="awards">
+								<li class="item">
+										<div class="award">
+											Reed 2020 Hackday - Technical Excellence
+										</div>
+												<div class="award">
+												<span class="date">
+													Dec 2020
+												</span>
+												<span class="awarder">
+													Reed
+												</span>
+										</div>
+								</li>
+						</ul>
+					</section>
+						<section class="section-languages">
+							<h2 class="title">
+							    <span class="">Languages</span>
+							</h2>
+							<ul class="languages">
+									<li class="item">
+											<div class="language">
+												Portuguese
+													<span class="fluency">
+														| Native Speaker
+													</span>
+											</div>
+									</li>
+									<li class="item">
+											<div class="language">
+												English
+													<span class="fluency">
+														| Professional Working Proficiency
+													</span>
+											</div>
+									</li>
+									<li class="item">
+											<div class="language">
+												Spanish
+													<span class="fluency">
+														| Limited Working Proficiency
+													</span>
+											</div>
+									</li>
+							</ul>
+						</section>
+						<section class="section-interests">
+							<h2 class="title">
+							    <span class="">Interests</span>
+							</h2>
+							<ul class="interests">
+										<li class="item">
+											Music
+										</li>
+											<div class="keywords">
+													<span class="label label-default">Rock</span>
+													<span class="label label-default">Fusion Jazz</span>
+											</div>
+										<li class="item">
+											Yoga
+										</li>
+										<li class="item">
+											Literature
+										</li>
+											<div class="keywords">
+													<span class="label label-default">Fantastic</span>
+													<span class="label label-default">Comics</span>
+											</div>
+										<li class="item">
+											Watching Documentaries
+										</li>
+										<li class="item">
+											Watching IT Related Conferences
+										</li>
+											<div class="keywords">
+													<span class="label label-default">GOTO</span>
+													<span class="label label-default">NDC</span>
+													<span class="label label-default">Lead DEV</span>
+													<span class="label label-default">Hack Summit</span>
+											</div>
+							</ul>
+						</section>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
