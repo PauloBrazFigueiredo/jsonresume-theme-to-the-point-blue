@@ -10,21 +10,21 @@
 							{{formatDate startDate}}
 						</span>
 					{{/if}}
-					{{#if endDate}}
-						<span class="endDate position">
-							- {{formatDate endDate }}
-						</span>
-					{{else}}
+					{{#ifEquals endDate ""}}
 						<span class="endDate position">
 							- Present
 						</span>
-					{{/if}}
+					{{else}}
+						<span class="endDate position">
+							- {{formatDate endDate }}
+						</span>
+					{{/ifEquals}}
 				</span>
 				 | 
 				{{#if company}}
 					<span class="position">
 						{{#if website}}
-							<a href="{{website}}" class="position">{{company}}</a>
+							<a href="{{website}}" class="position-link">{{company}}</a>
 						{{else}}
 							{{company}}
 						{{/if}}
@@ -39,13 +39,12 @@
 				{{#if summary}}
 					<br/>
 					<span class="summary">
-						{{summary}}	
+						{{summary}}	{{#if highlights.length}}Highlights:{{/if}}
 					</span>	
 				{{/if}}
 				{{#if highlights.length}}
 					<br/>
 					<span class="summary">
-						Highlights:
 					</span>				
 					<ul class="highlights">
 						{{#each highlights}}

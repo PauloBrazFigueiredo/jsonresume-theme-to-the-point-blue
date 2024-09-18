@@ -11,18 +11,18 @@ function render (resume) {
   var filenames = fs.readdirSync(partialsDir)
 
   Handlebars.registerHelper({
-	trim: function(str) {
-		return str.trim();
-	},
-	replaceFirst: function(str, toBeReplaced, b) {
-		return str.split(toBeReplaced).join(b);
-	},
-	startsWith: function(prefix, str, options) {
-		return (str.indexOf(prefix) === 0) ? options.fn(this) : options.inverse(this)
-	},
-	ifEquals: function(arg1, arg2, options) {
-		return (arg1 == arg2) ? options.fn(this) : options.inverse(this)
-	},
+    trim: function(str) {
+      return str.trim();
+    },
+    replaceFirst: function(str, toBeReplaced, b) {
+      return str.split(toBeReplaced).join(b);
+    },
+    startsWith: function(prefix, str, options) {
+      return (str.indexOf(prefix) === 0) ? options.fn(this) : options.inverse(this)
+    },
+    ifEquals: function(arg1, arg2, options) {
+      return (arg1 == arg2) ? options.fn(this) : options.inverse(this)
+    },
     formatDate: function (date) {
       if (typeof date === 'undefined') {
         return 'now'
@@ -70,26 +70,26 @@ function render (resume) {
 
       return text
     },
-	parseWorkText: function (str) {
-	  if(str.lastIndexOf("[") == -1) {
-		  return str
-	  }
-	  var text = str.substring(0, str.lastIndexOf("[") - 1)
-      return text.trim()
-    },
-	parseWorkTech: function (str) {
-	  if(str.lastIndexOf("[") == -1) {
-	    return ''
-	  }
-	  let text = ''
-	  let content = str.substring(
-		str.lastIndexOf("[") + 1, 
-		str.lastIndexOf("]"))
-	  let tech = content.split(',')
-	  for (i = 0; i < tech.length; i++) {
-		text += '<span class=\'label label-default\'>' + tech[i].trim() + '</span>'
-	  }
-	  return text
+    parseWorkText: function (str) {
+      if(str.lastIndexOf("[") == -1) {
+        return str
+      }
+      var text = str.substring(0, str.lastIndexOf("[") - 1)
+        return text.trim()
+      },
+    parseWorkTech: function (str) {
+      if(str.lastIndexOf("[") == -1) {
+        return ''
+      }
+      let text = ''
+      let content = str.substring(
+      str.lastIndexOf("[") + 1, 
+      str.lastIndexOf("]"))
+      let tech = content.split(',')
+      for (i = 0; i < tech.length; i++) {
+        text += '<span class=\'label label-default\'>' + tech[i].trim() + '</span>'
+      }
+      return text
     }
   })
 
@@ -122,5 +122,16 @@ function exportPdf (resumeFile, pageFormat) {
 
 module.exports = {
   render: render,
-  exportPdf: exportPdf
+  exportPdf: exportPdf,
+	pdfRenderOptions: {
+		format: 'A4',
+		//mediaType: 'print',
+		pdfViewport: { width: 1920, height: 1280 },
+		margin: {
+			top: '0.0in',
+			bottom: '0.0in',
+			left: '0.0in',
+			right: '0.0in',
+		},
+	}
 }

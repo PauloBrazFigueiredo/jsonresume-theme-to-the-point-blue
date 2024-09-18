@@ -33,7 +33,11 @@
 				</div>
 				{{#if institution}}
 					<div class="institution">
-						{{institution}}
+						{{#if url}}
+							<a href="{{url}}">{{institution}}</a>
+						{{else}}
+							{{institution}}
+						{{/if}}
 					</div>
 				{{/if}}
 				{{#if courses.length}}
